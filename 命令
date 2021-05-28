@@ -1,0 +1,6 @@
+./projection -x xmap_dokicam_video.pgm -y ymap_dokicam_video.pgm -h 640 -w 1280 -r 640 -c 1280 -b 37 -m front
+
+
+
+ffmpeg -i 002551_0679_21920_1732.png -i xmap_dokicam_video.pgm -i ymap_dokicam_video.pgm  -filter_complex remap out2_front.jpg
+

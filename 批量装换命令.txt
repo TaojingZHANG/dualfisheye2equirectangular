@@ -1,0 +1,6 @@
+cd /home/ztj/DISK2/Data_Open/PanoraMIS双鱼眼/Sequence7-L1/EquireTangular
+(echo ${i} | cut -d '/' -f 4)
+for i in ../Sequence7-L1/images/*.png ;do ffmpeg -i ${i} -i xmap_dokicam_video.pgm -i ymap_dokicam_video.pgm  -filter_complex remap Images/`echo ${i} | cut -d '/' -f 4`;done
+
+
+
